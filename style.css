@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Color */
+
+:root {
+  --orange: #f84d43;
+  --blue: #2323d6;
+  --black: #333333;
+}
+
+/* Typography */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--black);
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* ********************************** */
+
+/* Hero */
+
+.hero {
+  background-image: url("hero-1x.jpg");
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero__box {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  max-width: 500px;
+}
+
+.hero__h3 {
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.hero__h4 {
+  margin-bottom: 1rem;
+}
+
+/* Icons */
+
+.icons {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.icons__box {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icons__img {
+  max-width: 75px;
+  max-height: 75px;
+  margin-bottom: 0.5em;
+}
+
+.icons__h5 {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.services {
+  background-color: var(--orange);
+  color: white;
+}
+
+.services__img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.services__text {
+  padding: 2rem;
+}
+
+.services__h4 {
+  text-transform: capitalize;
+}
+
+.services__items {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  text-align: center;
+  background: var(--blue);
+}
+
+.testimonial__box {
+  background: white;
+  padding: 1rem;
+}
+
+.testimonial__p::before {
+  content: open-quote;
+}
+
+.testimonial__p::after {
+  content: close-quote;
+}
+
+.testimonial__img {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial__p {
+  margin-bottom: 0.5rem;
+}
+
+.customers {
+  padding: 4rem 2rem;
+}
+
+.customers__box {
+  margin: 0 auto 0;
+  background: var(--black);
+  color: white;
+  text-align: center;
+}
+
+.customers__box--first {
+  margin-bottom: 2rem;
+}
+
+.customers__img {
+  width: 100%;
+}
+
+.customers__text {
+  padding: 2rem;
+}
+
+.customers__h5 {
+  margin-bottom: 0.5rem;
+}
+
+.customers__p {
+  margin-bottom: 2rem;
+}
+
+.customers__btn {
+  padding: 0.5rem 2rem;
+  background: var(--orange);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.contact {
+  min-height: 300px;
+  background: url("customer-1x.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.contact__box {
+  position: relative;
+  z-index: 2;
+}
+
+.contact__h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact__h4 {
+  border-top: 8px solid var(--orange);
+  border-bottom: 8px solid var(--orange);
+  padding: 0.5rem 0;
+}
+
+.footer {
+  padding: 1rem;
+  background: var(--black);
+  color: white;
+  text-align: center;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dashed white;
+}
+
+@media (min-width: 600px) {
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .icons__box {
+    flex-basis: 50%;
+  }
+
+  .services {
+    display: flex;
+  }
+
+  .services__image {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .services__img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .services__text {
+    flex-basis: 50%;
+  }
+
+  .services__h4 {
+    padding-left: 40px;
+  }
+
+  .testimonial__box {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .customers__box {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 760px) {
+  .icons {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .icons__box {
+    flex-basis: 33%;
+  }
+
+  .customers {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .customers__box {
+    flex-basis: 45%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    height: 100vh;
+  }
+}
